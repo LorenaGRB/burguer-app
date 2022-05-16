@@ -1,0 +1,31 @@
+.input{
+  display: none;
+  &:checked + .label{
+    background-color: #e35545;
+    color: #fff;
+  }
+}
+.container{
+  width: 100px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #8b9494; 
+  outline: none;
+  border-radius: 4px;
+  justify-content: space-between;
+  margin: 5px;
+  &__inside{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: none; 
+  }
+  }
+.label{
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Lato';
+  font-weight: 700px;
+  font-size: 11px;
+  }
