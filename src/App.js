@@ -3,11 +3,9 @@ import HamburgerForm from './views/HamburgerForm/index'
 
 function App() {
   return (
-    // <Layout>
-    //   <Routes/>
-    // </Layout>
-    <>
 
+    <>
+      <HamburgerForm />
     </>
   )
 }

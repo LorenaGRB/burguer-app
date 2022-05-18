@@ -1,0 +1,155 @@
+
+.wrapper{
+    display: flex;
+    flex-direction: column;  
+    padding: 0 0 30px 88px;  
+    @media ( min-width:1360px ){
+        width: 300px;
+        min-height: 115px;
+        padding: 0 0 0 72px;
+    }
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px 0px;
+}
+.img{
+    position: relative;
+    height: 0px;
+    width: 0px;
+    top: 10px;
+    left: -60px;
+}
+.title{
+    font-family: 'Lato';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #494F66;
+    margin: 0 0 10px -45px;
+    @media ( min-width:1360px ){
+        width: 250px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+.switch {
+    position: relative;
+    left: 80px;
+    top: 0px;
+    @media ( min-width:1360px ){
+        left: 0;
+    }
+    &-btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 2em;
+        left: 105px;
+        top: -50px;
+        line-height: 0;
+        outline: none;
+        position: absolute;
+        width: 0;
+        @media ( min-width:1360px ){
+            left: 0px;
+            top: 0px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            border-radius: 28px;
+            background: #bdc3c7;
+            left: -2px;
+            top: -2px;
+            transition: background-color 0.25s ease-out 0.10s;
+            width: 51px;
+            height: 31px;
+            cursor: pointer;
+            @media ( min-width:1360px ){
+                width: fit-content;
+                height: fit-content;
+                background-color: transparent;
+                content:'agregar';
+                font-family: 'Lato';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px;
+                letter-spacing: 0.6px;
+                text-align: left;
+                text-transform: uppercase;
+                color: #6F7DFF;
+                left: 30px;
+                top: 5px;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            box-shadow: 0 .0625em .375em 0 #666;
+            border-radius: 50%;
+            background: #ffffff;
+            transform: translate(0, 0);
+            transition: transform 0.25s ease-out 0.10s;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            @media ( min-width:1360px ){
+                width: 22px;
+                height: 22px;
+                background-color: transparent;
+                content:'+';
+                font-family: 'Lato';
+                font-size: 18px;
+                font-weight: 700;
+                color: #6F7DFF;
+                border: 1px solid #6F7DFF;
+                border-radius: 50%;
+                line-height: 20px;
+                text-align: center;
+            }
+        }
+        &:checked {
+            &:after {
+                transform: translate(19px, 0);
+                @media ( min-width:1360px ){
+                    background-color: transparent;
+                    content:'_';
+                    font-family: 'Lato';
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: #6F7DFF;
+                    border: 1px solid #6F7DFF;
+                    border-radius: 50%;
+                    line-height: 14px;
+                    text-align: center;
+                    transform: translate(0, 0);
+                }
+            }
+        }
+    &:checked:before {
+            background: #7CC954;
+            @media ( min-width:1360px ){
+                background-color: transparent;
+                content:'quitar';
+                font-family: 'Lato';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px;
+                letter-spacing: 0.6px;
+                text-align: left;
+                text-transform: uppercase;
+                color: #6F7DFF;
+                left: 30px;
+                top: 5px;
+            }
+        }
+    }
+}
